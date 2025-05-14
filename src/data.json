@@ -1,0 +1,20 @@
+{
+  "presentacion": {
+    "nombre": "Juan Memito Fernandez Soto",
+    "titulo": "Ingeniero en Sistemas de Información",
+    "descripcion": "Como recién egresado de la carrera de Ingeniería en Sistemas de Información, cuento con una sólida formación técnica y un enfoque colaborativo en el trabajo en equipo. Me considero una persona motivada, con gran capacidad para adaptarme a nuevos desafíos y con un constante deseo de mejorar mis competencias profesionales. ",
+    "descripcion2": "Mi objetivo es contribuir de manera efectiva en proyectos tecnológicos que me permitan aplicar mis conocimientos y, al mismo tiempo, continuar creciendo en mi carrera profesional. Busco un entorno donde pueda colaborar con equipos multidisciplinarios y aprender de cada experiencia, tanto en el ámbito técnico como personal."
+  },
+  "contacto": {
+    "telefono": "+56 9 1234 5678",
+    "email": "Juan.Memito@example.com",
+    "ubicacion": "Valparaíso, Chile"
+  },
+  "educacion": {
+    "carrera": "Ingeniería en Sistemas de Información",
+    "universidad": "Universidad de Memito FC",
+    "fecha": "2018 - 2024",
+    "Ciudad": "Seul, Corea"
+    
+  }
+}
