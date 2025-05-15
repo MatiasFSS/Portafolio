@@ -1,9 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub} from '@fortawesome/free-brands-svg-icons';
 import { faUserGraduate,faAddressBook, faShareAlt  } from '@fortawesome/free-solid-svg-icons';
-import { CardImageProfile } from "../components/Presentacion/CardImageProfile";
-import { CardPresentationProfile } from "../components/Presentacion/CardPresentationProfile";
-import { CardInfo } from "../components/Presentacion/CardInfo";
+import { CardImageProfile, CardInfo, CardPresentationProfile } from "../components/Presentacion";
 import { useInfo } from "../hooks/useInfo";
 import data from '../data.json'
 

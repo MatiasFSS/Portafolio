@@ -1,5 +1,4 @@
-import { CardHabilidades } from '../components/Habilidades/CardHabilidades'
-import { CardImageLogos } from '../components/Habilidades/CardImageLogos'
+import { CardHabilidades, CardImageLogos } from '../components/Habilidades'
 import { useInfo } from '../hooks/useInfo'
 import logos from '../logos.json'
 import habilidades from '../habilidades.json'
