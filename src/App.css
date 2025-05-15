@@ -5,3 +5,8 @@
 .font-items {
     font-family: "Delicious Handrawn", cursive;
 }
+
+.scrollable-column {
+  height: 100%;
+  overflow-y: auto;
+}

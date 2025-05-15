@@ -3,7 +3,7 @@
 export const CardImageProfile = () => {
   return (
     <>
-        <div className="card background-cards mt-3">
+        <div className="card mt-3">
             <div className="card-body text-center">
             <img
                 src="assets\img\imagenPrueba.png"

@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "HTML",
+    "descripcion": "Nivel básico-intermedio. Capacidad para crear estructuras web semánticas, trabajar con formularios, tablas, listas y elementos multimedia, aplicando buenas prácticas en la organización del contenido."
+  },
+  {
+    "nombre": "CSS",
+    "descripcion": "Nivel básico-intermedio. Capacidad para aplicar estilos a elementos HTML, utilizar selectores, trabajar con modelos de caja, layouts con Flexbox y Grid, y personalizar interfaces con variables y pseudoclases."
+  },
+  {
+    "nombre": "Javascript",
+    "descripcion": "JavaScript: Nivel básico-intermedio. Capacidad para manejar eventos, trabajar con funciones, condicionales, ciclos y conceptos fundamentales como arrays, objetos y asincronía con fetch y promesas."
+  },
+  {
+    "nombre": "React",
+    "descripcion": "Nivel intermedio. Experiencia en la creación de componentes funcionales, manejo de estado con hooks (useState, useEffect, useContext, custom hooks, etc), gestión de rutas con React Router y uso de patrones como useReducer y Redux para el manejo global del estado."
+  },
+  {
+    "nombre": "Android Studio",
+    "descripcion": "Nivel básico-intermedio. Capacidad para desarrollar aplicaciones móviles con layouts XML, manejo de actividades, navegación entre pantallas y conexión con APIs REST usando Kotlin"
+  },
+  {
+    "nombre": "NodeJS",
+    "descripcion": "Nivel básico-intermedio. Capacidad para crear servidores simples, trabajar con Express, manejar rutas, middlewares y realizar peticiones HTTP, así como conectar con bases de datos y consumir APIs externas."
+  }
+]

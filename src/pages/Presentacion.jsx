@@ -1,19 +1,15 @@
-import { useEffect, useState } from "react";
-import data from '../data.json'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub} from '@fortawesome/free-brands-svg-icons';
 import { faUserGraduate,faAddressBook, faShareAlt  } from '@fortawesome/free-solid-svg-icons';
-import { CardImageProfile } from "../components/CardImageProfile";
-import { CardPresentationProfile } from "../components/CardPresentationProfile";
-import { CardInfo } from "../components/CardInfo";
-
+import { CardImageProfile } from "../components/Presentacion/CardImageProfile";
+import { CardPresentationProfile } from "../components/Presentacion/CardPresentationProfile";
+import { CardInfo } from "../components/Presentacion/CardInfo";
+import { useInfo } from "../hooks/useInfo";
+import data from '../data.json'
 
 export const Presentacion = () => {
-  const [info, setInfo] = useState(null)
 
-  useEffect(() => {
-    setInfo(data)
-  }, []);
+  const {info} = useInfo(data)
 
   if (!info) return <div className="container mt-4">Cargando...</div>;
 
@@ -37,7 +33,7 @@ export const Presentacion = () => {
           </div>
         </div>
 
-        <div className="row mt-2 justify-content-around">
+        <div className="row mt-4 justify-content-around">
           <div className="col-sm-12 col-md-4 d-flex flex-column gap-3 my-2">
             {/* Contacto */}
             <CardInfo icon={faAddressBook} title=' Contacto'>
