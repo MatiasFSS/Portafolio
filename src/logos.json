@@ -1,12 +1,12 @@
 [
-  { "src": "assets/img/react.png", "alt": "React" },
+  { "src": "assets/img/react.webp", "alt": "React" },
   { "src": "assets/img/javascript.webp", "alt": "JavaScript" },
   { "src": "assets/img/Android.webp", "alt": "Android" },
   { "src": "assets/img/mysql.webp", "alt": "Mysql" },
   { "src": "assets/img/html.webp", "alt": "HTML" },
   { "src": "assets/img/css.webp", "alt": "CSS" },
-  { "src": "assets/img/bootstrap.png", "alt": "Bootstrap" },
-  { "src": "assets/img/kotlin.png", "alt": "Kotlin" },
-  { "src": "assets/img/typescript.png", "alt": "Typescript" },
-  { "src": "assets/img/mongo.png", "alt": "mongo" }
+  { "src": "assets/img/bootstrap.webp", "alt": "Bootstrap" },
+  { "src": "assets/img/kotlin.webp", "alt": "Kotlin" },
+  { "src": "assets/img/typescript.webp", "alt": "Typescript" },
+  { "src": "assets/img/mongo.webp", "alt": "mongo" }
 ]

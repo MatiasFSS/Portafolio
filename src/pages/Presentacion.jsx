@@ -1,77 +1,55 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faSquareGithub} from '@fortawesome/free-brands-svg-icons';
-import { faUserGraduate,faAddressBook, faShareAlt  } from '@fortawesome/free-solid-svg-icons';
-import { CardImageProfile, CardInfo, CardPresentationProfile } from "../components/Presentacion";
+import { CardImageProfile, CardPresentationProfile, CardTecnologiasFav, CardHabilidadesBlandas, InfoCarousel } from "../components/Presentacion";
 import { useInfo } from "../hooks/useInfo";
-import data from '../data.json'
+import data from '../data.json';
+import proyectos from '../proyectos.json';
+import { ProyectosCarrusel } from "../components/Presentacion/ProyectosCarrusel";
 
 export const Presentacion = () => {
-
-  const {info} = useInfo(data)
-
-  if (!info) return <div className="container mt-4">Cargando...</div>;
+  const { info:contacto } = useInfo(data);
+  const {info:proyecto} = useInfo(proyectos)
+  if (!contacto || !proyecto) return <div className="container mt-4">Cargando...</div>;
 
   return (
-    <>
-      <div className="container py-4">
-        <div className="row">
-          {/* Columna izquierda */}
-          <div className="col-md-4 col-lg-3 d-flex flex-column gap-3">
-            {/* Imagen de perfil y Boton de descarga*/}
-            <CardImageProfile />
-          </div>
-          {/* Columna derecha */}
-          <div className="col-md-8 col-lg-9 d-flex flex-column gap-3">
-            <CardPresentationProfile
-              nombre={info.presentacion.nombre}
-              titulo={info.presentacion.titulo}
-              descripcion={info.presentacion.descripcion}
-              descripcion2={info.presentacion.descripcion2}
-            />
-          </div>
+    <div className="container py-4">
+      <div className="row align-items-stretch">
+        {/* Columna izquierda - Imagen */}
+        <div className="col-12 col-lg-5 col-xl-4 d-flex flex-column gap-3">
+          <CardImageProfile/>
         </div>
 
-        <div className="row mt-4 justify-content-around">
-          <div className="col-sm-12 col-md-4 d-flex flex-column gap-3 my-2">
-            {/* Contacto */}
-            <CardInfo icon={faAddressBook} title=' Contacto'>
-              <p><strong>Teléfono:</strong> {info.contacto.telefono}</p>
-              <p><strong>Email:</strong> {info.contacto.email}</p>
-              <p><strong>Ubicación:</strong> {info.contacto.ubicacion}</p>
-            </CardInfo>
-          </div>
-          <div className="col-sm-12 col-md-4 d-flex flex-column gap-3 my-2">
-            {/* Educacion */}
-            <CardInfo icon={faUserGraduate} title=" Educación">
-              <p className="fw-semibold">{info.educacion.carrera}</p>
-              <p className="text-muted">{info.educacion.universidad}</p>
-              <p className="text-muted">{info.educacion.fecha}</p>
-              <p>{info.educacion.ciudad}</p>
-            </CardInfo>
-          </div>
-          <div className="col-sm-12 col-md-4 d-flex flex-column gap-3 my-2">
-            {/* Linkedin y Github */}
-            <CardInfo icon={faShareAlt} title=" Redes Profesionales">
-              <div className="d-flex justify-content-around align-items-center pt-2">
-                <div className="text-center">
-                  <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#0e76a8' }}>
-                    <FontAwesomeIcon icon={faLinkedin} size="4x" />
-                  </a>
-                  <p className="fw-semibold">LinkedIn</p>
-                </div>
-                <div className="text-center">
-                  <a href="https://github.com/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#333' }}>
-                    <FontAwesomeIcon icon={faSquareGithub} size="4x" />
-                  </a>
-                  <p className="fw-semibold">Github</p>
-                </div>
-              </div>
-            </CardInfo>
+        {/* Columna derecha */}
+        <div className="col-12 col-lg-7 col-xl-8 d-flex flex-column gap-3">
+          {/* Presentación arriba */}
+          <CardPresentationProfile
+            nombre={contacto.presentacion.nombre}
+            titulo={contacto.presentacion.titulo}
+            descripcion={contacto.presentacion.descripcion}
+            descripcion2={contacto.presentacion.descripcion2}
+          />
+          <div className="row">
+            <div className="col-md-6 col-lg-6">
+                <InfoCarousel info={contacto} id="ContactoCarousel"/>
+               
+            </div>
+            <div className="col-md-6 col-lg-6">
+              <CardHabilidadesBlandas/>
+             
+            </div>
           </div>
         </div>
       </div>
-    </>
-  )
-}
+      <div className="row mt-3">
+        <div className="col-md-6 col-lg-6">
+                
+                <CardTecnologiasFav/>
+            </div>
+            <div className="col-md-6 col-lg-6">
 
+              <ProyectosCarrusel info={proyecto} id="proyectosCarousel"/>
+            </div>
+      </div>
 
+      
+    </div>
+  );
+};

@@ -1,0 +1,12 @@
+{
+  "proyecto1":{
+      "nombre": "Journal App", 
+      "descripcion": "Aplicación de notas con login en Firebase"
+  },
+  "proyecto2":{ 
+    "nombre": "Calendar App",
+    "descripcion": "Aplicación de calendario, para agendar eventos con login utilizando NodeJS"
+  }
+  
+ 
+}

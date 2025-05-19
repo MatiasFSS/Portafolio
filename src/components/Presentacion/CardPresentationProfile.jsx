@@ -3,7 +3,7 @@
 export const CardPresentationProfile = ({nombre, titulo, descripcion, descripcion2}) => {
   return (
     <>
-      <div className="card h-100 mt-3">
+      <div className="card mt-3 h-100">
             <div className="card-body">
                 <h2>{nombre}</h2>
                 <h4 className="text-muted">{titulo}</h4>
