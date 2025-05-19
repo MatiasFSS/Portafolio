@@ -6,7 +6,7 @@ export const ProyectosCarrusel = ({info,  id}) => {
 
   return (
     <>
-        <div id={id} className="carousel slide" style={{ minHeight: "72px" }}>
+        <div id={id} className="carousel carousel-dark slide" style={{ minHeight: "72px" }}>
             <div className="carousel-inner h-100">
                 <div className="carousel-item active h-100">
                     <CardProyectos nombre={info.proyecto1.nombre} descripcion={info.proyecto1.descripcion}/>

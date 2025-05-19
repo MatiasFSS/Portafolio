@@ -8,5 +8,7 @@
   { "src": "assets/img/bootstrap.webp", "alt": "Bootstrap" },
   { "src": "assets/img/kotlin.webp", "alt": "Kotlin" },
   { "src": "assets/img/typescript.webp", "alt": "Typescript" },
-  { "src": "assets/img/mongo.webp", "alt": "mongo" }
+  { "src": "assets/img/mongo.webp", "alt": "mongo" },
+  { "src": "assets/img/postman.webp", "alt": "Postman" },
+  { "src": "assets/img/git.webp", "alt": "Git" }
 ]

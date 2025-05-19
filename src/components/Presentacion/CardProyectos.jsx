@@ -6,6 +6,7 @@ export const CardProyectos = ({nombre, descripcion, children}) => {
       <div className="mt-2">
         <h5 className="card-title">{nombre}</h5>
         <p className="card-text">{descripcion}</p>
+        <button className="btn btn-primary">Ir al Proyecto</button>
         {children}
       </div>
       

@@ -10,3 +10,20 @@
   height: 100%;
   overflow-y: auto;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+  pointer-events: none !important; /* para que no interfieran cuando están ocultas */
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.text-justify {
+  text-align: justify;
+}

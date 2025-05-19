@@ -18,6 +18,8 @@ export const CardImageProfile = () => {
             />
             </div>
         </div>
+        
+        <button className="btn btn-primary">Descargar CV</button>
          
     </>
   )
