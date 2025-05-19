@@ -2,7 +2,7 @@ import { CardImageProfile, CardPresentationProfile, CardTecnologiasFav, CardHabi
 import { useInfo } from "../hooks/useInfo";
 import data from '../data.json';
 import proyectos from '../proyectos.json';
-import { ProyectosCarrusel } from "../components/Presentacion/ProyectosCarrusel";
+import { ProyectosCarrusel } from "../components/Presentacion/Carrusel/ProyectosCarrusel";
 
 
 export const Presentacion = () => {

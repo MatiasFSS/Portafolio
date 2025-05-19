@@ -1,5 +1,5 @@
-import { CardProyectos } from "./CardProyectos"
-import { useCarrusel } from "../../hooks/useCarrusel"
+import { CardProyectos } from "../Cards/CardProyectos"
+import { useCarrusel } from "../../../hooks/useCarrusel"
 
 export const ProyectosCarrusel = ({info,  id}) => {
     useCarrusel(id)

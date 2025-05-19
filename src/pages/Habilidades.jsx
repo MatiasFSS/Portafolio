@@ -5,7 +5,7 @@ import habilidades from '../habilidades.json'
 import curso from '../cursos.json'
 import { useState } from 'react'
 import { ProyectosFiltrados } from '../components/Habilidades/ProyectosFiltrados'
-import { CardCursos } from '../components/Habilidades/CardCursos'
+import { CardCursos } from '../components/Habilidades/Cards/CardCursos'
 
 export const Habilidades = () => {
   const {info:tecnologias} = useInfo(logos)

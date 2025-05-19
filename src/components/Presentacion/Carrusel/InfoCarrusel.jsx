@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { faUserGraduate, faAddressBook, faShareAlt } from '@fortawesome/free-solid-svg-icons';
-import { CardInfo } from "../Presentacion/CardInfo";
-import { useCarrusel } from "../../hooks/useCarrusel";
+import { CardInfo } from "../Cards/CardInfo";
+import { useCarrusel } from "../../../hooks/useCarrusel";
 
 export const InfoCarousel = ({ info, id }) => {
     useCarrusel(id)
