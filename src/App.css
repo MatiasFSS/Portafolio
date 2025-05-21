@@ -13,6 +13,7 @@
 
 .carousel-control-prev,
 .carousel-control-next {
+  width: 5% !important; /* Reduce el ancho de los botones laterales */
   opacity: 0 !important;
   transition: opacity 0.3s ease !important;
   pointer-events: none !important; /* para que no interfieran cuando están ocultas */
@@ -48,3 +49,4 @@
   left: -30px;
   top: 20px;
 }
+

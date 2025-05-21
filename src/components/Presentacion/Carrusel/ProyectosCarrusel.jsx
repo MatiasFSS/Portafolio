@@ -9,10 +9,10 @@ export const ProyectosCarrusel = ({info,  id}) => {
         <div id={id} className="carousel carousel-dark slide" style={{ minHeight: "72px" }}>
             <div className="carousel-inner h-100">
                 <div className="carousel-item active h-100">
-                    <CardProyectos nombre={info.proyecto1.nombre} descripcion={info.proyecto1.descripcion}/>
+                    <CardProyectos nombre={info.proyecto1.nombre} descripcion={info.proyecto1.descripcion} url={info.proyecto1.url}/>
                 </div>
                 <div className="carousel-item h-100">
-                    <CardProyectos nombre={info.proyecto2.nombre} descripcion={info.proyecto2.descripcion}/>
+                    <CardProyectos nombre={info.proyecto2.nombre} descripcion={info.proyecto2.descripcion} url={info.proyecto2.url}/>
                 </div>
             </div>
         
