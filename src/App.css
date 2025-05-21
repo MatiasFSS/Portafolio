@@ -1,16 +1,20 @@
+/* Background navbar*/
 .background-cards {
     background-color: #e9ecef;
 }
 
+/*Fuente navbar*/
 .font-items {
     font-family: "Delicious Handrawn", cursive;
 }
 
+/*scroll*/
 .scrollable-column {
   height: 100%;
   overflow-y: auto;
 }
 
+/* Flechas carrusel*/
 .carousel-control-prev,
 .carousel-control-next {
   width: 5% !important; /* Reduce el ancho de los botones laterales */
@@ -25,10 +29,12 @@
   pointer-events: auto !important;
 }
 
+/*Justificar texto*/
 .text-justify {
   text-align: justify;
 }
 
+/*Timeline experiencia*/
 .timeline {
   border-left: 4px solid #0d6efd;
   padding-left: 1rem;
@@ -49,4 +55,3 @@
   left: -30px;
   top: 20px;
 }
-
