@@ -4,16 +4,23 @@ import { useCarrusel } from "../../../hooks/useCarrusel"
 export const ProyectosCarrusel = ({info,  id}) => {
     useCarrusel(id)
 
+    if (!info.length) {
+    return <div>Cargando proyectos...</div>;
+  }
+
   return (
     <>
         <div id={id} className="carousel carousel-dark slide" style={{ minHeight: "72px" }}>
             <div className="carousel-inner h-100">
-                <div className="carousel-item active h-100">
-                    <CardProyectos nombre={info.proyecto1.nombre} descripcion={info.proyecto1.descripcion} url={info.proyecto1.url}/>
-                </div>
-                <div className="carousel-item h-100">
-                    <CardProyectos nombre={info.proyecto2.nombre} descripcion={info.proyecto2.descripcion} url={info.proyecto2.url}/>
-                </div>
+                {info.map((proyecto, index) => (
+                    <div key={index} className={`carousel-item h-100 ${index === 0 ? 'active' : ''}`}>
+                        <CardProyectos 
+                            nombre={proyecto.nombre || "Sin nombre"} 
+                            descripcion={proyecto.descripcionCorta} 
+                            url={proyecto.url || "#"} 
+                                                />
+                    </div>
+                ))}
             </div>
         
             <button className="carousel-control-prev" type="button" data-bs-target={`#${id}`} data-bs-slide="prev">

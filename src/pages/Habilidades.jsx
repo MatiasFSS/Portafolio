@@ -1,25 +1,29 @@
 import { CardHabilidades, CardImageLogos } from '../components/Habilidades'
 import { useInfo } from '../hooks/useInfo'
+import { useInfoFirebase } from '../hooks/useInfoFirebase'
 import logos from '../logos.json'
-import habilidades from '../habilidades.json'
-import curso from '../cursos.json'
+// import habilidades from '../habilidades.json'
+// import curso from '../cursos.json'
 import { useState } from 'react'
 import { ProyectosFiltrados } from '../components/Habilidades/ProyectosFiltrados'
 import { CardCursos } from '../components/Habilidades/Cards/CardCursos'
 
 export const Habilidades = () => {
-  const {info:tecnologias} = useInfo(logos)
-  const {info:descHabilidades} = useInfo(habilidades)
-  const {info:cursos} = useInfo(curso)
-
-  const categorias = [...new Set(descHabilidades?.map(h => h.categoria))] || [];
+  const { cursos, habilidades, loading } = useInfoFirebase();
+  const {info: tecnologias} = useInfo(logos)
+ 
+  const categorias = [...new Set(habilidades?.map(h => h.categoria))] || [];
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todas');
 
-  if (!tecnologias || !descHabilidades) return <div className="container mt-4">Cargando...</div>;
+  console.log({ cursos, habilidades, tecnologias, loading });
+
+  if (loading || !cursos || !habilidades || !tecnologias) {
+    return <div className="container mt-4">Cargando...</div>;
+  }
 
   const habilidadesFiltradas = categoriaSeleccionada === 'Todas'
-  ? descHabilidades
-  : descHabilidades.filter(h => h.categoria === categoriaSeleccionada);
+  ? habilidades
+  : habilidades.filter(h => h.categoria === categoriaSeleccionada);
 
   return (
     <>
@@ -60,9 +64,9 @@ export const Habilidades = () => {
               </p>
             </div>
             <div className="row">
-              {cursos.map((curso, index) => (
+              {cursos.map((cur, index) => (
                 <div className="col-4 col-sm-12 col-lg-4   mb-3 d-flex justify-content-center" key={index}>
-                  <CardCursos curso={curso.curso} descripcion={curso.descripcion} estado={curso.estado} url={curso.url}/>
+                  <CardCursos curso={cur.curso} descripcion={cur.descripcion} estado={cur.estado} url={cur.url}/>
                 </div>
                 ))}
               </div>

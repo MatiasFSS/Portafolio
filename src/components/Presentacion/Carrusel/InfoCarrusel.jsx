@@ -4,24 +4,30 @@ import { faUserGraduate, faAddressBook, faShareAlt } from '@fortawesome/free-sol
 import { CardInfo } from "../Cards/CardInfo";
 import { useCarrusel } from "../../../hooks/useCarrusel";
 
-export const InfoCarousel = ({ info, id }) => {
+export const InfoCarousel = ({ infoContacto, infoEducacion, id }) => {
     useCarrusel(id)
+  
+    // console.log(infoContacto)
+    // console.log(infoEducacion)
+    if (!infoContacto || !infoEducacion) {
+      return <div>Cargando información...</div>;
+    }
   return (
     <div id={id} className="carousel slide">
       <div className="carousel-inner h-100">
         <div className="carousel-item active h-100">
           <CardInfo icon={faAddressBook} title=" Contacto">
-            <p><strong>Teléfono:</strong> {info.contacto.telefono}</p>
-            <p><strong>Email:</strong> {info.contacto.email}</p>
-            <p><strong>Ubicación:</strong> {info.contacto.ubicacion}</p>
+            <p><strong>Teléfono:</strong> {infoContacto.telefono}</p>
+            <p><strong>Email:</strong> {infoContacto.email}</p>
+            <p><strong>Ubicación:</strong> {infoContacto.ubicacion}</p>
           </CardInfo>
         </div>
         <div className="carousel-item h-100">
           <CardInfo icon={faUserGraduate} title=" Educación">
-            <p className="fw-semibold">{info.educacion.carrera}</p>
-            <p className="text-muted">{info.educacion.universidad}</p>
-            <p className="text-muted">{info.educacion.fecha}</p>
-            <p>{info.educacion.ciudad}</p>
+            <p className="fw-semibold">{infoEducacion.carrera}</p>
+            <p className="text-muted">{infoEducacion.universidad}</p>
+            <p className="text-muted">{infoEducacion.fecha}</p>
+            <p>{infoEducacion.ciudad}</p>
           </CardInfo>
         </div>
         <div className="carousel-item h-100">

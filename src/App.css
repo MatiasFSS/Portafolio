@@ -55,3 +55,16 @@
   left: -30px;
   top: 20px;
 }
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-rotando {
+  animation: rotar 3s linear infinite;
+}

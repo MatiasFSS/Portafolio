@@ -1,19 +1,21 @@
 import { CardImageProfile, CardPresentationProfile, CardTecnologiasFav, CardHabilidadesBlandas, InfoCarousel } from "../components/Presentacion";
-import { useInfo } from "../hooks/useInfo";
-import data from '../data.json';
-import proyectos from '../proyectos.json';
+import { useInfoFirebase } from "../hooks/useInfoFirebase";
+// import data from '../data.json';
+// import proyectos from '../proyectos.json';
 import { ProyectosCarrusel } from "../components/Presentacion/Carrusel/ProyectosCarrusel";
 
 
 export const Presentacion = () => {
-  const { info:contacto } = useInfo(data);
-  const {info:proyecto} = useInfo(proyectos)
-  if (!contacto || !proyecto) return <div className="container mt-4">Cargando...</div>;
+  const {data, proyectos, loading} = useInfoFirebase();
+
+  if (loading) return <div className="container mt-4">Cargando...</div>;
+
+  if (!data || !proyectos) return <div className="container mt-4">No hay datos disponibles</div>;
 
   return (
     <div className="container py-4">
       <div className="text-center my-4">
-        <h2 className="fw-bold">¡Hola! Soy Juan</h2>
+        <h2 className="fw-bold">¡Hola! Soy Matías</h2>
         <p className="text-center text-muted mb-4">
           Te cuento un poco sobre quién soy, qué me apasiona de la tecnología y cómo espero aportar a los proyectos en los que participe.
         </p>
@@ -29,14 +31,14 @@ export const Presentacion = () => {
         <div className="col-12 col-lg-7 col-xl-8 d-flex flex-column gap-3">
           {/* Presentación arriba */}
           <CardPresentationProfile
-            nombre={contacto.presentacion.nombre}
-            titulo={contacto.presentacion.titulo}
-            descripcion={contacto.presentacion.descripcion}
-            descripcion2={contacto.presentacion.descripcion2}
+            nombre={data.presentacion.nombre}
+            titulo={data.presentacion.titulo}
+            descripcion={data.presentacion.descripcion}
+            descripcion2={data.presentacion.descripcion2}
           />
           <div className="row">
             <div className="col-md-12 col-lg-6">
-                <InfoCarousel info={contacto} id="ContactoCarousel"/>
+                <InfoCarousel infoContacto={data.contacto} infoEducacion={data.educacion} id="ContactoCarousel"/>
                
             </div>
             <div className="col-md-12 col-lg-6">
@@ -52,7 +54,7 @@ export const Presentacion = () => {
             <CardTecnologiasFav/>
         </div>
         <div className="col-md-12 col-lg-6">
-          <ProyectosCarrusel info={proyecto} id="proyectosCarousel"/>
+          <ProyectosCarrusel info={proyectos} id="proyectosCarousel"/>
         </div>
       </div>
 
