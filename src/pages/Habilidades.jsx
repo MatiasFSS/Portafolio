@@ -27,7 +27,7 @@ export const Habilidades = () => {
 
   return (
     <>
-      <div className="container-fluid py-3">
+      <div className="container-fluid py-5">
         <div className="text-center my-4">
           <h2 className="fw-bold">Habilidades Técnicas</h2>
           <p className="text-muted">

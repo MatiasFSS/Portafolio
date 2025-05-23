@@ -21,7 +21,6 @@ export const InfoProvider = ({ children }) => {
     return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   };
 
-  // ✅ Esta función carga los 3 documentos individuales de "data"
   const loadData = async () => {
     const contactoSnap = await getDoc(doc(FirebaseDB, "data", "contacto"));
     const educacionSnap = await getDoc(doc(FirebaseDB, "data", "educacion"));
@@ -42,7 +41,7 @@ export const InfoProvider = ({ children }) => {
           loadCollection("proyectos"),
           loadCollection("experiencia"),
           loadCollection("habilidades"),
-          loadData() // ✅ esto es un objeto
+          loadData()
         ]);
 
         setInfo({

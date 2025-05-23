@@ -13,7 +13,7 @@ export const Presentacion = () => {
   if (!data || !proyectos) return <div className="container mt-4">No hay datos disponibles</div>;
 
   return (
-    <div className="container py-4">
+    <div className="container py-5">
       <div className="text-center my-4">
         <h2 className="fw-bold">¡Hola! Soy Matías</h2>
         <p className="text-center text-muted mb-4">

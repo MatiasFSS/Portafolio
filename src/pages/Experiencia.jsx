@@ -20,7 +20,7 @@ export const Experiencia = () => {
 
   return (
     <>
-      <div className="container-fluid py-3 px-5">
+      <div className="container-fluid py-5 px-5">
         <h2 className="fw-bold my-4">Experiencia y proyectos importantes</h2>
         {experiencia.map((exp, index) => ( 
               <CardExperiencia 
