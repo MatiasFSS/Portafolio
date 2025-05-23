@@ -10,7 +10,8 @@ export const InfoProvider = ({ children }) => {
     proyectos: [],
     experiencia: [],
     habilidades: [],
-    data: {}
+    data: {},
+    habilidades_blandas:[]
   });
 
   const [loading, setLoading] = useState(true);
@@ -36,11 +37,12 @@ export const InfoProvider = ({ children }) => {
   useEffect(() => {
     const loadAll = async () => {
       try {
-        const [cursos, proyectos, experiencia, habilidades, data] = await Promise.all([
+        const [cursos, proyectos, experiencia, habilidades, habilidades_blandas, data] = await Promise.all([
           loadCollection("cursos"),
           loadCollection("proyectos"),
           loadCollection("experiencia"),
           loadCollection("habilidades"),
+          loadCollection("habilidades-blandas"),
           loadData()
         ]);
 
@@ -49,8 +51,10 @@ export const InfoProvider = ({ children }) => {
           proyectos,
           experiencia,
           habilidades,
-          data
+          habilidades_blandas,
+          data, 
         });
+        
       } catch (error) {
         console.error("Error cargando datos del contexto:", error);
       } finally {

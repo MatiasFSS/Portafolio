@@ -3,7 +3,7 @@
 export const CardImageProfile = () => {
   return (
     <>
-        <div className="card mt-3 h-100">
+        <div className="card mt-3 h-100 card-custom">
             <div className="card-body text-center background-cards">
             <img
                 src="assets\img\imagenPrueba.png"
@@ -19,7 +19,9 @@ export const CardImageProfile = () => {
             </div>
         </div>
         
-        <button className="btn btn-primary">Descargar CV</button>
+        <a href="https://drive.google.com/file/d/1nCKiz9-HrxHOYF84zkQWE34B8O2ch8sm/view?usp=sharing" className="btn btn-custom" target="_blank" rel="noopener noreferrer" download>
+          Descargar CV
+        </a>
          
     </>
   )

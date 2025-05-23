@@ -27,10 +27,10 @@ export const Habilidades = () => {
 
   return (
     <>
-      <div className="container-fluid py-5">
+      <div className="container-fluid py-5 fade-in-up">
         <div className="text-center my-4">
           <h2 className="fw-bold">Habilidades Técnicas</h2>
-          <p className="text-muted">
+          <p className="text-light-muted">
             Estas son las tecnologías y herramientas que he aprendido y utilizado en proyectos académicos y personales. Puedes filtrar por categoría para ver en qué áreas tengo más experiencia.
           </p>
           <ProyectosFiltrados
@@ -39,7 +39,7 @@ export const Habilidades = () => {
                   setCategoriaSeleccionada={setCategoriaSeleccionada}
                 />
         </div>
-        <div className="row" style={{ height: '80vh' }}>
+        <div className="row">
             <div className="col-sm-4 col-md-3">
               <div className="row">             
                 {tecnologias.map((logo, index) => (
@@ -50,7 +50,7 @@ export const Habilidades = () => {
               </div>
             </div>
 
-            <div className="col-sm-8 col-md-9 scrollable-column">
+            <div className="col-sm-8 col-md-9 scrollable-column" style={{ maxHeight: '80vh', overflowY: 'auto' }}>
               {habilidadesFiltradas.map((deschabilidades, index) =>(
                 <div className="col-md-12 d-flex justify-content-center" key={index}>
                   <CardHabilidades nombre={deschabilidades.nombre} descripcion={deschabilidades.descripcion}/>
@@ -59,7 +59,7 @@ export const Habilidades = () => {
             </div>
             <div className="text-center my-4">
               <h2 className="fw-bold">Estudios adicionales</h2>
-              <p className="text-muted">
+              <p className="text-light-muted">
                 Estos son algunos cursos que he realizado, con el fin de adquirir y reforzar conocimientos.
               </p>
             </div>

@@ -6,7 +6,7 @@ export const ProyectosFiltrados = ({ categorias, categoriaSeleccionada, setCateg
             <div className="col-12">
                 <div className="mt-3 aling-items-center">
                 <button 
-                        className={`btn btn-sm me-2 ${categoriaSeleccionada === 'Todas' ? 'btn-primary' : 'btn-outline-primary'} mb-1`}
+                        className={`btn btn-sm me-2 ${categoriaSeleccionada === 'Todas' ? 'btn-custom' : 'btn-outline-custom'} mb-1`}
                         onClick={() => setCategoriaSeleccionada('Todas')}
                     >
                         Todas
@@ -14,7 +14,7 @@ export const ProyectosFiltrados = ({ categorias, categoriaSeleccionada, setCateg
                     {categorias.map(categoria => (
                         <button 
                         key={categoria}
-                        className={`btn btn-sm me-2 ${categoriaSeleccionada === categoria ? 'btn-primary' : 'btn-outline-primary'} mb-1`}
+                        className={`btn btn-sm me-2 ${categoriaSeleccionada === categoria ? 'btn-custom' : 'btn-outline-custom'} mb-1`}
                         onClick={() => setCategoriaSeleccionada(categoria)}
                         >
                         {categoria}

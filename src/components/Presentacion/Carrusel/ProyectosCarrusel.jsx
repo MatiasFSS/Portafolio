@@ -10,7 +10,7 @@ export const ProyectosCarrusel = ({info,  id}) => {
 
   return (
     <>
-        <div id={id} className="carousel carousel-dark slide" style={{ minHeight: "72px" }}>
+        <div id={id} className="carousel slide" style={{ minHeight: "72px" }}>
             <div className="carousel-inner h-100">
                 {info.map((proyecto, index) => (
                     <div key={index} className={`carousel-item h-100 ${index === 0 ? 'active' : ''}`}>

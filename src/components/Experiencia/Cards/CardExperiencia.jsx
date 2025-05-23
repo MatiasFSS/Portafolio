@@ -5,10 +5,10 @@ export const CardExperiencia = ({titulo, fecha, descripcion, descripcion2, categ
     <>
         <div className="timeline">
           {/* Experiencia 1: Práctica */}
-          <div className="card mb-4">
+          <div className="card mb-4 card-custom">
             <div className="card-body">
               <h5 className="card-title">{titulo}</h5>
-              <h6 className="card-subtitle mb-2 text-muted">
+              <h6 className="card-subtitle mb-2 text-light-muted">
                 {fecha}
               </h6>
               <p className="card-text">

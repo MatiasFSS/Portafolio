@@ -1,0 +1,53 @@
+body, #root {
+  background: linear-gradient(to bottom, #121212 0%, #19141b 80%, #1c0f2e 100%);
+  color: #f5eded !important;
+  
+}
+
+/*Tarjetas*/
+.card-custom{
+  background-color: #111111 !important;
+  color: #f5eded !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: none;
+}
+
+.card-custom:hover {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* botones */
+.btn-custom {
+  background-color: #540175; 
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #732d91;
+  color: #fff;
+}
+
+.btn-outline-custom {
+  background-color: transparent;
+  color: #8e44ad;
+  border: 1px solid #8e44ad;
+}
+
+.scrollable-column {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.text-justify {
+  text-align: justify;
+}
+.text-light-muted {
+  color: rgba(245, 237, 237, 0.658);
+}

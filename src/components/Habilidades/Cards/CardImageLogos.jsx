@@ -3,7 +3,7 @@
 export const CardImageLogos = ({src, alt}) => {
   return (
     <>
-        <div className="card mt-3">
+        <div className="card mt-3 card-custom">
             <div className="card-body text-center">
                 <img
                 src={src}

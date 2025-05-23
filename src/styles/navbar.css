@@ -1,0 +1,24 @@
+.navBarCustom {
+  background-color: #111111;
+  color: #f5eded;
+}
+
+.navBarCustom .nav-link {
+  color: #f5eded;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.navBarCustom .nav-link:hover {
+  color: #ffffff; /* Opcional: mejora el hover */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+}
+
+.navBarCustom .nav-link.active {
+  color: #ffffff;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+}

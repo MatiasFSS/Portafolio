@@ -1,0 +1,21 @@
+/*Timeline experiencia*/
+.timeline {
+  border-left: 4px solid #8e44ad;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.timeline .card {
+  position: relative;
+}
+
+.timeline .card::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #8e44ad;
+  border-radius: 50%;
+  position: absolute;
+  left: -30px;
+  top: 20px;
+}

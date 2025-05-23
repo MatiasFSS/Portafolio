@@ -4,7 +4,7 @@ import { faUserGraduate, faAddressBook, faShareAlt } from '@fortawesome/free-sol
 import { CardInfo } from "../Cards/CardInfo";
 import { useCarrusel } from "../../../hooks/useCarrusel";
 
-export const InfoCarousel = ({ infoContacto, infoEducacion, id }) => {
+export const InfoCarousel = ({ infoContacto, infoEducacion, id}) => {
     useCarrusel(id)
   
     // console.log(infoContacto)
@@ -25,8 +25,8 @@ export const InfoCarousel = ({ infoContacto, infoEducacion, id }) => {
         <div className="carousel-item h-100">
           <CardInfo icon={faUserGraduate} title=" Educación">
             <p className="fw-semibold">{infoEducacion.carrera}</p>
-            <p className="text-muted">{infoEducacion.universidad}</p>
-            <p className="text-muted">{infoEducacion.fecha}</p>
+            <p className="text-light-muted">{infoEducacion.universidad}</p>
+            <p className="text-light-muted">{infoEducacion.fecha}</p>
             <p>{infoEducacion.ciudad}</p>
           </CardInfo>
         </div>
@@ -34,13 +34,13 @@ export const InfoCarousel = ({ infoContacto, infoEducacion, id }) => {
           <CardInfo icon={faShareAlt} title=" Redes Profesionales">
             <div className="d-flex justify-content-around align-items-center pt-2">
               <div className="text-center">
-                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#0e76a8' }}>
+                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
                   <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </a>
                 <p className="fw-semibold">LinkedIn</p>
               </div>
               <div className="text-center">
-                <a href="https://github.com/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#333' }}>
+                <a href="https://github.com/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
                   <FontAwesomeIcon icon={faSquareGithub} size="3x" />
                 </a>
                 <p className="fw-semibold">GitHub</p>

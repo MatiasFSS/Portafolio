@@ -6,17 +6,17 @@ import { ProyectosCarrusel } from "../components/Presentacion/Carrusel/Proyectos
 
 
 export const Presentacion = () => {
-  const {data, proyectos, loading} = useInfoFirebase();
+  const {data, proyectos, habilidades_blandas, loading} = useInfoFirebase();
 
   if (loading) return <div className="container mt-4">Cargando...</div>;
 
-  if (!data || !proyectos) return <div className="container mt-4">No hay datos disponibles</div>;
+  if (!data || !proyectos || !habilidades_blandas) return <div className="container mt-4">No hay datos disponibles</div>;
 
   return (
-    <div className="container py-5">
+    <div className="container py-5 fade-in-up">
       <div className="text-center my-4">
-        <h2 className="fw-bold">¡Hola! Soy Matías</h2>
-        <p className="text-center text-muted mb-4">
+        <h2 className="fw-bold letra-saltando">¡Hola! Soy Matías</h2>
+        <p className="text-center text-light-muted  mb-4">
           Te cuento un poco sobre quién soy, qué me apasiona de la tecnología y cómo espero aportar a los proyectos en los que participe.
         </p>
       </div>
@@ -42,7 +42,7 @@ export const Presentacion = () => {
                
             </div>
             <div className="col-md-12 col-lg-6">
-              <CardHabilidadesBlandas/>
+              <CardHabilidadesBlandas  habilidad={habilidades_blandas[0]} />
              
             </div>
           </div>
