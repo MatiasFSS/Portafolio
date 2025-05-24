@@ -1,7 +1,7 @@
 import { CardExperiencia } from "../components/Experiencia/Cards/CardExperiencia"
 import { CardExperienciaProyectos } from "../components/Experiencia/Cards/CardExperienciaProyectos"
-import { ImgCalendarCarrusel } from "../components/Experiencia/Carrusel/imgCalendarCarrusel"
-import { useInfo } from "../hooks/useInfo"
+import { ImgCalendarCarrusel } from "../components/Experiencia/Carrusel/ImgCalendarCarrusel"
+import { useInfo } from "../hooks/useInfo" 
 import { useInfoFirebase } from "../hooks/useInfoFirebase"
 import imgCalendar from '../imgCalendar.json'
 import imgJournal from '../imgJournal.json'
