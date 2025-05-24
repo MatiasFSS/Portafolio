@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getDoc, getDocs, doc, collection } from "firebase/firestore";
-import { FirebaseDB } from "../firebase/config";
+import { FirebaseDB } from "../Firebase/config";
 import { InfoContext } from "./InfoContext";
 
 
