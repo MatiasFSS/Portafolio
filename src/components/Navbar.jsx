@@ -3,6 +3,13 @@ import { NavLink } from "react-router-dom"
 
 
 export const Navbar = () => {
+    
+    const handleNavClick = () => {
+    const navbarCollapse = document.getElementById("navbarNav");
+        if (navbarCollapse.classList.contains("show")) {
+        navbarCollapse.classList.remove("show");
+    }
+};
   return (
     <>
        <nav className="navbar navbar-expand-lg navBarCustom fixed-top shadow-sm">
@@ -14,13 +21,13 @@ export const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item px-3">
-                        <NavLink className="nav-link" to="/" end>Presentación</NavLink>
+                        <NavLink className="nav-link" to="/" onClick={handleNavClick}>Presentación</NavLink>
                     </li>
                     <li className="nav-item px-3">
-                        <NavLink className="nav-link" to="/habilidades">Habilidades</NavLink>
+                        <NavLink className="nav-link" to="/habilidades" onClick={handleNavClick}>Habilidades</NavLink>
                     </li>
                     <li className="nav-item px-3">
-                        <NavLink className="nav-link" to="/experiencia">Experiencia</NavLink>
+                        <NavLink className="nav-link" to="/experiencia" onClick={handleNavClick}>Experiencia</NavLink>
                     </li>
                 </ul>
             </div>

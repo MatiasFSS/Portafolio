@@ -51,7 +51,7 @@ export const Experiencia = () => {
             <ImgCalendarCarrusel infoList={JournalImg} id="imgJournalCarrusel"/>
             
           </div>
-          <div className="col-md-12 col-lg-6" >
+          <div className="col-12 col-md-12 col-lg-6" >
                 <CardExperienciaProyectos nombre={proyectos[0].nombre} descripcionLarga={proyectos[0].descripcionLarga} url={proyectos[0].url} />
           </div>
         </div>
