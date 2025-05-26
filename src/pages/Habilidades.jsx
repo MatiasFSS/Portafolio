@@ -33,43 +33,53 @@ export const Habilidades = () => {
           <p className="text-light-muted">
             Estas son las tecnologías y herramientas que he aprendido y utilizado en proyectos académicos y personales. Puedes filtrar por categoría para ver en qué áreas tengo más experiencia.
           </p>
-          <ProyectosFiltrados
+          
+        </div>
+        <div className="row">
+              <div className="col-sm-4 col-md-3">
+                <div className="row">             
+                  {tecnologias.map((logo, index) => (
+                  <div className="col-6 mb-3 d-flex justify-content-center" key={index}>
+                    <CardImageLogos src={logo.src} alt={logo.alt} />
+                  </div>
+                  ))}
+                </div>
+              </div>
+
+             <div className="col-sm-8 col-md-9 text-center">
+              <div className="sticky-top pb-3 z-1">
+                <ProyectosFiltrados
                   categorias={categorias}
                   categoriaSeleccionada={categoriaSeleccionada}
                   setCategoriaSeleccionada={setCategoriaSeleccionada}
                 />
-        </div>
-        <div className="row">
-            <div className="col-sm-4 col-md-3">
-              <div className="row">             
-                {tecnologias.map((logo, index) => (
-                <div className="col-6 mb-3 d-flex justify-content-center" key={index}>
-                  <CardImageLogos src={logo.src} alt={logo.alt} />
-                </div>
-                ))}
               </div>
-            </div>
 
-            <div className="col-sm-8 col-md-9 scrollable-column" style={{ maxHeight: '80vh', overflowY: 'auto' }}>
-              {habilidadesFiltradas.map((deschabilidades, index) =>(
-                <div className="col-md-12 d-flex justify-content-center" key={index}>
-                  <CardHabilidades nombre={deschabilidades.nombre} descripcion={deschabilidades.descripcion}/>
-                </div>
-              ))} 
-            </div>
-            <div className="text-center my-4">
-              <h2 className="fw-bold">Estudios adicionales</h2>
-              <p className="text-light-muted">
-                Estos son algunos cursos que he realizado, con el fin de adquirir y reforzar conocimientos.
-              </p>
-            </div>
-            <div className="row">
-              {cursos.map((cur, index) => (
-                <div className="col-4 col-sm-12 col-lg-4   mb-3 d-flex justify-content-center" key={index}>
-                  <CardCursos curso={cur.curso} descripcion={cur.descripcion} estado={cur.estado} url={cur.url}/>
-                </div>
+              <div style={{ maxHeight: '80vh', overflowY: 'auto'}}>
+                {habilidadesFiltradas.map((deschabilidades, index) => (
+                  <div className="col-md-12 d-flex justify-content-center" key={index}>
+                    <CardHabilidades
+                      nombre={deschabilidades.nombre}
+                      descripcion={deschabilidades.descripcion}
+                    />
+                  </div>
                 ))}
               </div>
+            </div>
+              <div className="text-center my-4">
+                <h2 className="fw-bold">Estudios adicionales</h2>
+                <p className="text-light-muted">
+                  Estos son algunos cursos que he realizado, con el fin de adquirir y reforzar conocimientos.
+                </p>
+
+                <div className="row justify-content-center">
+                  {cursos.map((cur, index) => (
+                    <div className="col-sm-12 col-lg-4 mb-3 d-flex justify-content-center" key={index}>
+                      <CardCursos curso={cur.curso} descripcion={cur.descripcion} estado={cur.estado} url={cur.url}/>
+                    </div>
+                    ))}
+                </div>
+              </div>  
             </div>
       </div>
         

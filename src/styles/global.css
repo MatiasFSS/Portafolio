@@ -19,7 +19,10 @@ body, #root {
   transition: all 0.3s ease-in-out;
 }
 
-
+.navbar-toggler-icon {
+  filter: invert(1); /* Esto invierte colores, útil si tu navbar es oscuro */
+  /* O prueba con otros filtros para ajustar colores */
+}
 
 /* botones */
 .btn-custom {
