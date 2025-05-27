@@ -18,7 +18,6 @@ OBS: Este portafolio puede cambiar con el tiempo. Se agregarán nuevos proyectos
 
 ## 🎯 Funcionalidades
 
-- Navegación SPA (Single Page Application)
 - Sección de presentación con datos personales
 - Carruseles de imágenes en proyectos personales
 - Sección de experiencia y tecnologías usadas
@@ -28,7 +27,7 @@ OBS: Este portafolio puede cambiar con el tiempo. Se agregarán nuevos proyectos
 ## ⚠️ Importante
 
 Este proyecto está conectado a una **instancia privada de Firebase Firestore**.  
-Por lo tanto, los datos cargados (experiencia, proyectos, imágenes) **no estarán disponibles** para otros usuarios que clonen este repositorio.
+Por lo tanto, los datos cargados (experiencia, proyectos, habilidades) **no estarán disponibles** para otros usuarios que clonen este repositorio.
 
 > Este código está pensado como referencia de desarrollo y muestra del uso de Firebase con React.
 
@@ -60,11 +59,10 @@ Si deseas probar o adaptar este portafolio para tu propio uso:
 
 ## 📸 Capturas de Pantalla
 
-> ![Descripción de la imagen](/public/assets/img-web/presentacion.webp)
 > ![Descripción de la imagen](/public/assets/img-web/habilidades.webp)
+
+
 > ![Descripción de la imagen](/public/assets/img-web/habilidades2.webp)
-> ![Descripción de la imagen](/public/assets/img-web/experiencia.webp)
+
+
 > ![Descripción de la imagen](/public/assets/img-web/experiencia2.webp)
-
-
-
