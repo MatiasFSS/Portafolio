@@ -1,12 +1,70 @@
-# React + Vite
+# Portafolio Personal 💼✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un portafolio web personal desarrollado en **React**, donde presento mi experiencia profesional, habilidades, educación y proyectos personales. La información se obtiene en tiempo real desde una base de datos en **Firebase Firestore**.
 
-Currently, two official plugins are available:
+OBS: Este portafolio puede cambiar con el tiempo. Se agregarán nuevos proyectos, mejoras estéticas y actualizaciones de información.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 Puedes ver el portafolio en línea aquí:  
+[https://portafolio-henna-kappa.vercel.app](https://portafolio-henna-kappa.vercel.app)
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Bootstrap
+- Firebase Firestore
+- Vite
+- CSS personalizado
+
+## 🎯 Funcionalidades
+
+- Navegación SPA (Single Page Application)
+- Sección de presentación con datos personales
+- Carruseles de imágenes en proyectos personales
+- Sección de experiencia y tecnologías usadas
+- Datos cargados dinámicamente desde Firebase
+- Diseño responsivo
+
+## ⚠️ Importante
+
+Este proyecto está conectado a una **instancia privada de Firebase Firestore**.  
+Por lo tanto, los datos cargados (experiencia, proyectos, imágenes) **no estarán disponibles** para otros usuarios que clonen este repositorio.
+
+> Este código está pensado como referencia de desarrollo y muestra del uso de Firebase con React.
+
+## 🛠 Instalación local
+
+Si deseas probar o adaptar este portafolio para tu propio uso:
+
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone https://github.com/MatiasFSS/Portafolio.git
+   ```
+
+2. **Instala las dependencias:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Inicia el servidor de desarrollo:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Abre en tu navegador:**
+
+   Visita `http://localhost:5173` para ver el portafolio en acción.
+
+## 📸 Capturas de Pantalla
+
+> ![Descripción de la imagen](/public/assets/img-web/presentacion.webp)
+> ![Descripción de la imagen](/public/assets/img-web/habilidades.webp)
+> ![Descripción de la imagen](/public/assets/img-web/habilidades2.webp)
+> ![Descripción de la imagen](/public/assets/img-web/experiencia.webp)
+> ![Descripción de la imagen](/public/assets/img-web/experiencia2.webp)
+
+
+

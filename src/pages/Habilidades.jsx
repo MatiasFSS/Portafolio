@@ -55,7 +55,7 @@ export const Habilidades = () => {
                 />
               </div>
 
-              <div style={{ maxHeight: '80vh', overflowY: 'auto'}}>
+              <div className="scroll-dark" style={{ maxHeight: '80vh', overflowY: 'auto'}}>
                 {habilidadesFiltradas.map((deschabilidades, index) => (
                   <div className="col-md-12 d-flex justify-content-center" key={index}>
                     <CardHabilidades

@@ -17,7 +17,7 @@ export const Presentacion = () => {
       <div className="text-center my-4">
         <h2 className="fw-bold letra-saltando">¡Hola! Soy Matías</h2>
         <p className="text-center text-light-muted  mb-4">
-          Te cuento un poco sobre quién soy, qué me apasiona de la tecnología y cómo espero aportar a los proyectos en los que participe.
+          Te cuento un poco sobre quién soy, qué busco y los proyectos que he desarrollado.
         </p>
       </div>
 
@@ -35,6 +35,7 @@ export const Presentacion = () => {
             titulo={data.presentacion.titulo}
             descripcion={data.presentacion.descripcion}
             descripcion2={data.presentacion.descripcion2}
+            descripcion3={data.presentacion.descripcion3}
           />
           <div className="row">
             <div className="col-md-12 col-lg-6">

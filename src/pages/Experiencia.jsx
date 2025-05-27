@@ -1,5 +1,6 @@
 import { CardExperiencia } from "../components/Experiencia/Cards/CardExperiencia"
 import { CardExperienciaProyectos } from "../components/Experiencia/Cards/CardExperienciaProyectos"
+import { CardVideo } from "../components/Experiencia/Cards/CardVideo"
 import { ImgCalendarCarrusel } from "../components/Experiencia/Carrusel/ImgCalendarCarrusel"
 import { useInfo } from "../hooks/useInfo" 
 import { useInfoFirebase } from "../hooks/useInfoFirebase"
@@ -21,19 +22,28 @@ export const Experiencia = () => {
   return (
     <>
       <div className="container-fluid py-5 px-5 fade-in-up">
-        <h2 className="fw-bold my-4">Experiencia y proyectos importantes</h2>
-        {experiencia.map((exp, index) => ( 
-              <CardExperiencia 
-              key={index}
-              titulo={exp.titulo} 
-              fecha={exp.fecha} 
-              descripcion={exp.descripcion} 
-              descripcion2={exp.descripcion2} 
-              categoria={exp.categoria} 
-              habilidades={exp.habilidades} 
-              tecnologias={exp.tecnologias}
-            />
-        ))}
+        <div className="row">
+          <h2 className="fw-bold my-4">Experiencia y proyectos importantes</h2>
+          <div className="col-ms-12 col-lg-6">
+             {experiencia.map((exp, index) => ( 
+                <CardExperiencia 
+                key={index}
+                titulo={exp.titulo} 
+                fecha={exp.fecha} 
+                descripcion={exp.descripcion} 
+                descripcion2={exp.descripcion2} 
+                categoria={exp.categoria} 
+                habilidades={exp.habilidades} 
+                tecnologias={exp.tecnologias}
+              />
+            ))}
+          </div>
+          
+          <div className="col-md-12 col-lg-6 d-flex justify-content-center">
+              <CardVideo/>
+          </div>
+        </div>
+       
 
         <h2 className="fw-bold my-4 text-center">Proyectos personales</h2>
         <div className="row mt-3">

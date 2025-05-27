@@ -13,7 +13,7 @@ export const InfoCarousel = ({ infoContacto, infoEducacion, id}) => {
       return <div>Cargando información...</div>;
     }
   return (
-    <div id={id} className="carousel slide">
+    <div id={id} className="carousel slide rounded overflow-hidden">
       <div className="carousel-inner h-100">
         <div className="carousel-item active h-100">
           <CardInfo icon={faAddressBook} title=" Contacto">

@@ -12,21 +12,15 @@ export const Navbar = () => {
         }
     };
 
-     useEffect(() => {
+    useEffect(() => {
         const handleClickOutside = (event) => {
         const navbar = document.getElementById("navbarNav");
         const toggler = document.querySelector(".navbar-toggler");
 
-        // Si el navbar está abierto y el clic fue fuera del navbar y del botón hamburguesa
-        if (
-            navbar &&
-            navbar.classList.contains("show") &&
-            !navbar.contains(event.target) &&
-            !toggler.contains(event.target)
-        ) {
+        if (navbar && navbar.classList.contains("show") && !navbar.contains(event.target) && !toggler.contains(event.target)) {
             navbar.classList.remove("show");
         }
-        };
+    };
 
         document.addEventListener("click", handleClickOutside);
         return () => {
@@ -38,11 +32,9 @@ export const Navbar = () => {
   return (
     <>
        <nav className="navbar navbar-expand-lg navBarCustom fixed-top shadow-sm">
-
             <button className="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item px-3">
