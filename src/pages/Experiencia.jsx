@@ -23,7 +23,7 @@ export const Experiencia = () => {
     <>
       <div className="container-fluid py-5 px-5 fade-in-up">
         <div className="row">
-          <h2 className="fw-bold my-4">Experiencia y proyectos importantes</h2>
+          <h2 className="fw-bold my-4">Experiencia y Proyectos Importantes</h2>
           <div className="col-ms-12 col-lg-6">
              {experiencia.map((exp, index) => ( 
                 <CardExperiencia 
@@ -45,7 +45,7 @@ export const Experiencia = () => {
         </div>
        
 
-        <h2 className="fw-bold my-4 text-center">Proyectos personales</h2>
+        <h2 className="fw-bold my-4 text-center">Proyectos Personales</h2>
         <div className="row mt-3">
           <div className="col-md-12 col-lg-6">
                 <ImgCalendarCarrusel infoList={CalendarioImg} id="imgCalendarCarrusel"/>

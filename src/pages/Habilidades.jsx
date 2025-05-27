@@ -67,7 +67,7 @@ export const Habilidades = () => {
               </div>
             </div>
               <div className="text-center my-4">
-                <h2 className="fw-bold">Estudios adicionales</h2>
+                <h2 className="fw-bold">Estudios Adicionales</h2>
                 <p className="text-light-muted">
                   Estos son algunos cursos que he realizado, con el fin de adquirir y reforzar conocimientos.
                 </p>
