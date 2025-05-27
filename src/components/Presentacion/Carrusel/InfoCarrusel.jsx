@@ -34,13 +34,13 @@ export const InfoCarousel = ({ infoContacto, infoEducacion, id}) => {
           <CardInfo icon={faShareAlt} title=" Redes Profesionales">
             <div className="d-flex justify-content-around align-items-center pt-2">
               <div className="text-center">
-                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
+                <a href="www.linkedin.com/in/matias-sanchez-soto-50176b222" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
                   <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </a>
                 <p className="fw-semibold">LinkedIn</p>
               </div>
               <div className="text-center">
-                <a href="https://github.com/tu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
+                <a href="https://github.com/MatiasFSS?tab=repositories" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
                   <FontAwesomeIcon icon={faSquareGithub} size="3x" />
                 </a>
                 <p className="fw-semibold">GitHub</p>
