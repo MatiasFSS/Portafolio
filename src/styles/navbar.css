@@ -1,24 +1,46 @@
 .navBarCustom {
   background-color: #111111;
   color: #f5eded;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 8px; 
 }
 
 .navBarCustom .nav-link {
   color: #f5eded;
   border-radius: 8px;
-  padding: 8px;
+  padding: 8px 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .navBarCustom .nav-link:hover {
-  color: #ffffff; /* Opcional: mejora el hover */
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
-  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  background-color: #540175; /* color sólido */
+  box-shadow: 0 6px 8px rgba(115, 45, 145, 0.4);
+  transform: translateY(-2px) scale(1.03);
 }
 
 .navBarCustom .nav-link.active {
   color: #ffffff;
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
-  transition: all 0.3s ease-in-out;
+  background-color: #540175;
+  box-shadow: 0 6px 8px rgba(115, 45, 145, 0.6);
+  transform: translateY(-2px) scale(1.03);
 }
+
+.navbar-toggler.open .navbar-toggler-icon {
+  /* Ejemplo: rotar 90 grados */
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+.navbar-toggler .navbar-toggler-icon {
+  transition: transform 0.3s ease;
+}
+

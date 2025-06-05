@@ -1,56 +1,64 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"
+import { Modal } from "./Modal";
 
 
 
 export const Navbar = () => {
-    
-    const handleNavClick = () => {
-    const navbarCollapse = document.getElementById("navbarNav");
-        if (navbarCollapse.classList.contains("show")) {
-            navbarCollapse.classList.remove("show");
-        }
-    };
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavClick = () => setIsOpen(false);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-        const navbar = document.getElementById("navbarNav");
-        const toggler = document.querySelector(".navbar-toggler");
+            const navbar = document.getElementById("navbarNav");
+            const toggler = document.querySelector(".navbar-toggler");
 
-        if (navbar && navbar.classList.contains("show") && !navbar.contains(event.target) && !toggler.contains(event.target)) {
-            navbar.classList.remove("show");
-        }
-    };
+            if (isOpen && navbar && !navbar.contains(event.target) &&!toggler.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
 
         document.addEventListener("click", handleClickOutside);
         return () => {
             document.removeEventListener("click", handleClickOutside);
         };
-
-    }, []);
+    }, [isOpen]);
 
   return (
-    <>
-       <nav className="navbar navbar-expand-lg navBarCustom fixed-top shadow-sm">
-            <button className="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ms-auto">
-                    <li className="nav-item px-3">
-                        <NavLink className="nav-link" to="/" onClick={handleNavClick}>Presentación</NavLink>
-                    </li>
-                    <li className="nav-item px-3">
-                        <NavLink className="nav-link" to="/habilidades" onClick={handleNavClick}>Habilidades</NavLink>
-                    </li>
-                    <li className="nav-item px-3">
-                        <NavLink className="nav-link" to="/experiencia" onClick={handleNavClick}>Experiencia</NavLink>
-                    </li>
-                </ul>
+    <nav className="navbar navbar-expand-lg navBarCustom fixed-top shadow-sm">
+      <button
+        className={`navbar-toggler ${isOpen ? "open" : ""}`}
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+
+      <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
+        <ul className="navbar-nav ms-auto">
+          <li className="nav-item px-3">
+            <NavLink className="nav-link" to="/" onClick={handleNavClick}>
+              Presentación
+            </NavLink>
+          </li>
+          <li className="nav-item px-3">
+            <NavLink className="nav-link" to="/habilidades" onClick={handleNavClick}>
+              Habilidades
+            </NavLink>
+          </li>
+          <li className="nav-item px-3">
+            <NavLink className="nav-link" to="/experiencia" onClick={handleNavClick}>
+              Experiencia
+            </NavLink>
+          </li>
+          <li className="nav-item px-3 w-100">
+            <div className="w-100">
+                <Modal />
             </div>
-        </nav>
-    </>
-  )
-}
-
-
+            </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};

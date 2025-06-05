@@ -15,7 +15,7 @@ export const Habilidades = () => {
   const categorias = [...new Set(habilidades?.map(h => h.categoria))] || [];
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todas');
 
-  console.log({ cursos, habilidades, tecnologias, loading });
+  // console.log({ cursos, habilidades, tecnologias, loading });
 
   if (loading || !cursos || !habilidades || !tecnologias) {
     return <div className="container mt-4">Cargando...</div>;
@@ -47,7 +47,7 @@ export const Habilidades = () => {
               </div>
 
              <div className="col-sm-8 col-md-9 text-center">
-              <div className="sticky-top pb-3 z-1">
+              <div className="pb-3 z-1">
                 <ProyectosFiltrados
                   categorias={categorias}
                   categoriaSeleccionada={categoriaSeleccionada}
@@ -55,7 +55,7 @@ export const Habilidades = () => {
                 />
               </div>
 
-              <div className="scroll-dark" style={{ maxHeight: '80vh', overflowY: 'auto'}}>
+              <div className="scroll-dark" style={{ maxHeight: '90vh', overflowY: 'auto'}}>
                 {habilidadesFiltradas.map((deschabilidades, index) => (
                   <div className="col-md-12 d-flex justify-content-center" key={index}>
                     <CardHabilidades
